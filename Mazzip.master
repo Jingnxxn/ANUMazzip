@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Mazzip.master.cs" Inherits="Mazzip" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="StyleSheet.css" type="text/css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        /* 좌우로 100% 채워지도록 스타일 추가 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        form {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 각 섹션의 스타일 수정 */
+        #form1 {
+            flex: 0;
+            margin: 0px;
+        }
+
+        /* 추가적으로 필요한 스타일 설정 */
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" style="width:100%">
+        <div style="min-height: 100vh; display: flex; flex-direction: column;">
+            <div height="100px" align="center" style="background-color:#fff9d4">
+                <asp:Label ID="Label1" runat="server" Text="MAZZIP" Font-Size="25pt" ForeColor="#EF8A07" CssClass="EnglishText"></asp:Label><br />
+                <asp:Label ID="Label2" runat="server" Text="ANU PLACE" Font-Size="15" ForeColor="#A55D00" CssClass="Korean"></asp:Label>
+            </div>
+            <div style="flex: 1;">
+                <asp:ContentPlaceHolder ID="cphMazzip" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div style="height: 100px; text-align: center; background-color: gray">
+                광고 연락주세요.
+            </div>
+        </div>
+    </form>
+</body>
+</html>
